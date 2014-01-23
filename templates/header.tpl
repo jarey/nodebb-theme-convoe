@@ -9,8 +9,8 @@
     <!-- IF bootswatchCSS --><link href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
         {link_tags}
     <!-- BEGIN pluginCSS -->
-	<link rel="stylesheet" href="{pluginCSS.path}">
-   	<!-- END pluginCSS -->
+    <link rel="stylesheet" href="{pluginCSS.path}">
+    <!-- END pluginCSS -->
     <script>
             var RELATIVE_PATH = "{relative_path}";
     </script>
