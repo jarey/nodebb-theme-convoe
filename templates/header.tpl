@@ -4,13 +4,13 @@
     <title>{browserTitle}</title>
     {meta_tags}
     <link rel="icon" type="image/x-icon" href="{brand:favicon}" />
-    <link href="{cssSrc}" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="{relative_path}/vendor/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{relative_path}/css/theme.css?{cache-buster}" />
-    {link_tags}
+    <!-- IF bootswatchCSS --><link href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
+        {link_tags}
     <!-- BEGIN pluginCSS -->
-    <link rel="stylesheet" href="{pluginCSS.path}">
-    <!-- END pluginCSS -->
+	<link rel="stylesheet" href="{pluginCSS.path}">
+   	<!-- END pluginCSS -->
     <script>
             var RELATIVE_PATH = "{relative_path}";
     </script>
@@ -28,7 +28,7 @@
                     }
             });
     </script>
-    <script src="{relative_url}/css/assets/scripts/cnvo.min.js"></script>
+    <script src="{relative_path}/vendor/convoe/cnvo.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 </head>
 
