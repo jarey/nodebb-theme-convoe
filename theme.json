@@ -1,0 +1,8 @@
+{
+    "id": "nodebb-theme-convoe",
+    "name": "NodeBB Convoe",
+    "description": "Convoe Theme for NodeBB",
+    "url": "https://github.com/cnvo/nodebb-theme-convoe",
+    "screenshot": "screenshot.png",
+    "templates": "templates"
+}
