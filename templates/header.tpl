@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{browserTitle}</title>
-	{meta_tags}
-	<link rel="icon" type="image/x-icon" href="{brand:favicon}" />
-	<link rel="stylesheet" href="{relative_path}/vendor/fontawesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="{relative_path}/css/theme.css?{cache-buster}" />
-	<!-- IF bootswatchCSS --><link href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
-	{link_tags}
-	<!-- BEGIN pluginCSS -->
-	<link rel="stylesheet" href="{pluginCSS.path}">
-	<!-- END pluginCSS -->
-	<script>
-		var RELATIVE_PATH = "{relative_path}";
-	</script>
-	<script src="{relative_path}/socket.io/socket.io.js"></script>
-	<!-- BEGIN clientScripts -->
-	<script src="{relative_path}/{clientScripts.script}"></script>
-	<!-- END clientScripts -->
-	<script>
-		require.config({
-			baseUrl: "{relative_path}/src/modules",
-			waitSeconds: 3,
-			urlArgs: "{cache-buster}",
-			paths: {
-				"forum": '../forum'
-			}
-		});
-	</script>
-
-	<!-- TODO : this has to be refactored, maybe configured from ACP? -baris -->
-	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <title>{browserTitle}</title>
+    {meta_tags}
+    <link rel="icon" type="image/x-icon" href="{brand:favicon}" />
+    <link href="{cssSrc}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="{relative_path}/vendor/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{relative_path}/css/theme.css?{cache-buster}" />
+    {link_tags}
+    <!-- BEGIN pluginCSS -->
+    <link rel="stylesheet" href="{pluginCSS.path}">
+    <!-- END pluginCSS -->
+    <script>
+            var RELATIVE_PATH = "{relative_path}";
+    </script>
+    <script src="{relative_path}/socket.io/socket.io.js"></script>
+    <!-- BEGIN clientScripts -->
+    <script src="{relative_path}/{clientScripts.script}"></script>
+    <!-- END clientScripts -->
+    <script>
+            require.config({
+                    baseUrl: "{relative_path}/src/modules",
+                    waitSeconds: 3,
+                    urlArgs: "{cache-buster}",
+                    paths: {
+                            "forum": '../forum'
+                    }
+            });
+    </script>
+    <script src="{relative_path}/vendor/convoe/cnvo.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 </head>
 
+
+
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top header" role="navigation" id="header-menu">
+	<a id="maintenence-mode" class="hide" href="#">...</a>
+	<header class="navbar navbar-inverse navbar-fixed-top header headroom bg-primary dker " role="navigation" id="header-menu">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,47 +45,55 @@
 					<span class="icon-bar"></span>
 				</button>
 				<div>
-					<a href="{relative_path}/">
-						<img class="{brand:logo:display} forum-logo" src="{brand:logo}" />
+					<a href="/">
+						<img class="{brand:logo:display} forum-logo" height="100px" width="100px" src="{brand:logo}" />
 					</a>
-					<a href="{relative_path}/">
-						<h1 class="navbar-brand forum-title">{title}</h1>
+					<a href="/">
+						<h1 class="navbar-brand forum-title text-white">{title}</h1>
 					</a>
 				</div>
 			</div>
 
 			<div class="navbar-collapse collapse navbar-ex1-collapse">
+			
+			    
+			    
 				<ul id="main-nav" class="nav navbar-nav">
 					<li>
-						<a href="{relative_path}/recent"><i class="fa fa-fw fa-clock-o" title="[[global:header.recent]]"></i><span class="visible-xs-inline"> [[global:header.recent]]</span></a>
+						<a href="/recent"><i class="fa fa-clock-o" title="[[global:header.recent]]"></i></a>
 					</li>
 					<li class="nodebb-loggedin">
-						<a href="{relative_path}/unread"><i id="unread-count" class="fa fa-fw fa-inbox" data-content="0" title="[[global:header.unread]]"></i><span class="visible-xs-inline"> [[global:header.unread]]</span></a>
+						<a href="/unread"><i id="unread-count" class="fa fa-inbox" data-content="0" title="[[global:header.unread]]"></i></a>
 					</li>
-					<li>
-						<a href="{relative_path}/users"><i class="fa fa-fw fa-users" title="[[global:header.users]]"></i><span class="visible-xs-inline"> [[global:header.users]]</span></a>
+					<!-- @TODO
+<li>
+						<a href="/users"><i class="fa fa-users" title="[[global:header.users]]"></i></a>
 					</li>
+-->
 					<li class="{adminDisplay}">
-						<a href="{relative_path}/admin"><i class="fa fa-fw fa-cogs" title="[[global:header.admin]]"></i><span class="visible-xs-inline"> [[global:header.admin]]</span></a>
+						<a href="/admin"><i class="fa fa-cogs" title="[[global:header.admin]]"></i></a>
 					</li>
-
+					
+					
 					<li class="visible-xs">
-						<a id="mobile-search-button" href="{relative_path}/search"><i class="fa fa-search" title="[[global:header.search]]"></i> [[global:header.search]]</a>
+						<a id="mobile-search-button" href="{relative_path}/search"><i class="fa fa-search" title="[[global:header.search]]"></i><span class="visible-xs-inline"> [[global:header.search]]</span></a>
 					</li>
-
+					
+					
 					<!-- BEGIN navigation -->
-					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}">
-							<!-- IF navigation.iconClass -->
-							<i class="fa fa-fw {navigation.iconClass}"></i>
-							<!-- ENDIF navigation.iconClass -->
+                    <li class="{navigation.class}">
+                            <a href="{relative_path}{navigation.route}" title="{navigation.title}">
+                                    <!-- IF navigation.iconClass -->
+                                    <i class="fa fa-fw {navigation.iconClass}"></i>
+                                    <!-- ENDIF navigation.iconClass -->
 
-							<!-- IF navigation.text -->
-							<span class="{navigation.textClass}">{navigation.text}</span>
-							<!-- ENDIF navigation.text -->
-						</a>
-					</li>
-					<!-- END navigation -->
+                                    <!-- IF navigation.text -->
+                                    <span class="{navigation.textClass}">{navigation.text}</span>
+                                    <!-- ENDIF navigation.text -->
+                            </a>
+                    </li>
+                    <!-- END navigation -->
+					
 				</ul>
 
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right hide">
@@ -99,9 +109,10 @@
 							</li>
 						</ul>
 					</li>
+					
 					<li class="visible-xs">
 						<a href="{relative_path}/notifications"><i class="fa fa-exclamation-triangle" title="[[notifications:title]]"></i> [[notifications:title]]</a>
-					</li>
+                    </li>
 
 					<li class="chats dropdown text-center hidden-xs">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown"><i class="fa fa-comment"></i></a>
@@ -129,34 +140,35 @@
 				</ul>
 
 				<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
-					<!-- IF allowRegistration -->
-					<li>
-						<a href="{relative_path}/register">[[global:register]]</a>
-					</li>
-					<!-- ENDIF allowRegistration -->
-					<li>
-						<a href="{relative_path}/login">[[global:login]]</a>
-					</li>
+                    <!-- IF allowRegistration -->
+                    <li>
+                    	<a href="{relative_path}/register">[[global:register]]</a>
+                    </li>
+                    <!-- ENDIF allowRegistration -->
+                    <li>
+                    	<a href="{relative_path}/login">[[global:login]]</a>
+                    </li>
 				</ul>
 
 				<ul id="logged-conditional-menu" class="nav navbar-nav navbar-right">
-					<li class="hidden-xs">
-						<form id="search-form" class="navbar-form navbar-right" role="search" method="GET" action="">
+					<li>
+						<form id="search-form" class="navbar-form navbar-right no-p-lr hidden-xs" role="search" method="GET" action="">
 							<div class="hide" id="search-fields">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search" name="query" value="">
+									<input type="text" class="form-control no-border dk text-white" placeholder="Search" name="query" value="">
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
+							<button id="search-button" type="button" class="btn btn-link hide"><i class="fa fa-search"></i></button>
 						</form>
 					</li>
-
+					
 					<li class="hidden-xs">
 						<a href="#" id="search-button" class="hide"><i class="fa fa-search"></i></a>
-					</li>
+                    </li>
+                    
 				</ul>
-
-				<ul class="nav navbar-nav navbar-right pagination-block">
+				<ul class="nav navbar-nav navbar-right pagination-block hide">
 					<li class="active">
 						<a href="#">
 							<i class="fa fa-chevron-up pointer"></i>
@@ -170,7 +182,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</header>
 
 	<input id="csrf_token" type="hidden" template-variable="csrf" value="{csrf}" />
 

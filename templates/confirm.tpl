@@ -2,6 +2,6 @@
 	<strong>{title}</strong>
 	<p>{text}</p>
 	<p>
-		<a href="{relative_path}/">[[notifications:back_to_home]]</a>
+		<a href="{relative_path}/">convoe</a>
 	</p>
 </div>

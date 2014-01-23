@@ -1,5 +1,3 @@
-
-
 	</div><!--END container -->
 
 	<div id="upload-picture-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Upload Picture" aria-hidden="true">
@@ -31,8 +29,8 @@
 					<div id="alert-error" class="alert alert-danger hide"></div>
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
-					<button id="pictureUploadSubmitBtn" class="btn btn-primary">[[user:upload_picture]]</button>
+					<button class="btn btn-white btn-rounded" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button id="pictureUploadSubmitBtn" class="btn btn-primary btn-rounded">[[user:upload_picture]]</button>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
@@ -41,16 +39,21 @@
 	<div id="alert_window"></div>
 
 
-	<footer id="footer" class="container footer hide">
+	<footer id="footer" class="container footer">
 		{footerHTML}
 		<div class="copyright">
-			Copyright &copy; 2013 <a target="_blank" href="https://www.nodebb.com">NodeBB Forums</a> | <a target="_blank" href="//github.com/designcreateplay/NodeBB/graphs/contributors">Contributors</a>
+		<div id="footer-logo"></div>
+			<div id="footer-links" class="text-uc text-lte">
+				<a href="#"></a>
+			</div>
+		
 		</div>
 	</footer>
+	
 
 	<script>
 		require(['forum/footer']);
-	</script>
-
+    </script>
+    
 </body>
 </html>

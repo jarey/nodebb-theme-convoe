@@ -1,35 +1,57 @@
-<div class="well users account">
+<div class="row m-t-lg wrapper-md hero-page followers">
 
-	<div class="account-username-box" data-userslug="{userslug}">
-		<span class="account-username">
-			<a href="../../user/{userslug}">{username}</a> <i class="fa fa-chevron-right"></i>
-			<a href="../../user/{userslug}/followers">[[user:followers]]</a>
-		</span>
+
+<div class="hero-wrapper">
+<div class="hero-banner">
+<div class="container center clearfix m-b-lg">
+	
+	<header class="header no-border panel-body m-b-xs b-b account-header strong no-p-lr">
+	
+	<div class="pull-left text-left">
+	<p class="h1 strong no-borders text-white account-username" data-userslug="{userslug}">
+	<a class="bold" href="../../user/{userslug}">{username}</a>
+	</p>
+	<a href="../../user/{userslug}/followers" class="h3 text-lte text-white block">{username} has  {followersCount} followers.</a>
 	</div>
+	
+	<div class="account-username-box pull-right text-uc" data-userslug="{userslug}"></div>
+	</header>
+</div>
+</div>
+</div>	
 
-	<div>
+
+<div class="container m-t-lg no-p-lr">
+<section class="panel no-borders no-b-s">	
+
+	<div class="panel-body">
+	
+	
+	<header class="h4 header bg-white b-b no-borders text-center">
+	<p class="h2 strong text-heading text-center panel-heading no-borders">Followers</p>
+	</header>
+		
+		<div class="center">
 		<!-- BEGIN followers -->
-		<div class="users-box">
-			<a href="../../user/{followers.userslug}">
-				<img src="{followers.picture}" class="img-thumbnail"/>
+		<section class="user-card inline text-center"> 
+			<a href="../../user/{followers.userslug}" title="{followers.fullname}" class="thumb-sm user-thumb-sm">
+				<img src="{followers.picture}" class="avatar user-avatar"/>
 			</a>
-			<br/>
-			<div class="user-info">
-				<a href="../../user/{followers.userslug}">{followers.username}</a>
-				<br/>
-				<div title="reputation" class="reputation">
-					<i class='fa fa-star'></i>
-					<span class='formatted-number'>{followers.reputation}</span>
-				</div>
-				<div title="post count" class="post-count">
-					<i class='fa fa-pencil'></i>
-					<span class='formatted-number'>{followers.postcount}</span>
-				</div>
-			</div>
-		</div>
+		</section>
 		<!-- END followers -->
+		</div>
+
+	<div id="no-followers-notice" class="panel animated fadeInDown hide text-center no-borders no-b-s">
+		<section class="text-center">
+			<div class="panel-body nothing m-t no-borders text-muted">
+				This user does not have any followers.
+			</div>
+		</section>
 	</div>
-	<div id="no-followers-notice" class="alert alert-warning hide">[[user:has_no_follower]]</div>
+	
+	
+	</section>
+	</div>
 </div>
 
 <input type="hidden" template-variable="yourid" value="{yourid}" />
