@@ -68,7 +68,7 @@
 
 
 <!-- //READMORE -->
-<script src="//c.convoe.com/vendor/convoe/cnvo.e.js" type="text/javascript"></script>
+<script src="{relative_url}/css/assets/scripts/cnvo.e.js" type="text/javascript"></script>
 	
 		<div class="col-md-12 m-b-lg text-center">
 			<div class="account-picture-block text-center thumb-lg m-b-lg">

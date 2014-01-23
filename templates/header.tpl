@@ -28,7 +28,7 @@
                     }
             });
     </script>
-    <script src="{relative_path}/vendor/convoe/cnvo.min.js"></script>
+    <script src="{relative_url}/css/assets/scripts/cnvo.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 </head>
 

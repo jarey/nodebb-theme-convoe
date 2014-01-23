@@ -14,8 +14,8 @@
 <div class="row m-t-lg wrapper-md hero-page category">
 
 <!-- // -->
-<script src="//c.convoe.com/vendor/convoe/cnvo.s.js" type="text/javascript"></script>
-<script src="//c.convoe.com/vendor/convoe/cnvo.c.js" type="text/javascript"></script>
+<script src="{relative_url}/css/assets/scripts/cnvo.s.js" type="text/javascript"></script>
+<script src="{relative_url}/css/assets/scripts/cnvo.c.js" type="text/javascript"></script>
 
 
 <div class="hero-wrapper ch-{category_id}">
@@ -199,10 +199,10 @@
 	<div class="panel no-border no-b-s">
 		<div class="panel-body no-p-lr">
 			<div class="footer-c">
-				<a class="btn btn-link" title="Moderate for convoe" href="//convoe.com/topic/157/moderator-application-faq">Moderate</a>
-				<a class="btn btn-link" title="Read convoe's Policies" href="//convoe.com/topic/91/terms-of-service">Policies</a>
-				<a class="btn btn-link" title="Help Center" href="//convoe.com/category/19/help">Help</a>
-				<a class="btn btn-link" title="Read conve's Guidlines" href="//convoe.com/topic/130/rules-guidelines">Guidelines</a>
+				<a class="btn btn-link" title="Moderate for convoe" href="#">Moderate</a>
+				<a class="btn btn-link" title="Read convoe's Policies" href="#">Policies</a>
+				<a class="btn btn-link" title="Help Center" href="#">Help</a>
+				<a class="btn btn-link" title="Read conve's Guidlines" href="#">Guidelines</a>
 			</div>
 		</div>
 	</div>

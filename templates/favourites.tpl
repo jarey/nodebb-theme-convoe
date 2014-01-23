@@ -1,7 +1,7 @@
 <div class="row m-t-lg wrapper-md hero-page favourites">
 
 <!-- //READMORE -->
-<script src="//c.convoe.com/vendor/convoe/cnvo.f.js" type="text/javascript"></script>
+<script src="{relative_url}/css/assets/scripts/cnvo.f.js" type="text/javascript"></script>
 
 <div class="hero-wrapper">
 <div class="hero-banner">

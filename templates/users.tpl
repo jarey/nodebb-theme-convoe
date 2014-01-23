@@ -7,7 +7,7 @@
 <header class="header text-left panel-body m-b b-b no-borders no-p-lr">
 <p class="h1 strong text-left no-borders text-white">Users</p>
 <br/>
-<p class="h3 text-lte text-white">Everyone on convoe</p>
+<p class="h3 text-lte text-white">Everyone</p>
 <ul class="nav nav-pills panel-body text-uc bold no-p-lr">
 		<li class=''><a href='{relative_path}/users/latest'>[[users:latest_users]]</a></li>
 		<li class=''><a href='{relative_path}/users/sort-posts'>[[users:top_posters]]</a></li>

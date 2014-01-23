@@ -1,5 +1,5 @@
 <!-- // -->
-<script src="//c.convoe.com/vendor/convoe/cnvo.c.js" type="text/javascript"></script>
+<script src="{relative_url}/css/assets/scripts/cnvo.c.js" type="text/javascript"></script>
 <script>
   $(function() {
     $('.deferred').imageloader(
@@ -10,12 +10,14 @@
   });
 </script>
 <div class="home-wrapper">
-<div class="home-background deferred" data-img="images/hb.jpg"></div>
+<div class="home-background deferred" data-img="#"></div>
+<!-- @REPLACE # WITH DATA IMAGE -->
 <div class="motd bg-primary">
 <div class="motd-cover">
 	<div class="motd-blurb col-md-12">
 		<span class="motd-welcome">Welcome to</span>
-		<span class="motd-name"><img class="motd-logo" height="90px" width="180px" src="../assets/cnvo@logotype_white.png"></span>
+		<span class="motd-name"><img class="motd-logo" height="90px" width="180px" src="#"></span>
+		<!-- @REPLACE # WITH LOGO IMAGE -->
 		<h3>A better discussion community.</h3>
 		<h4>Find, share, and discuss information on just about anything.</h4>
 		<!-- <small id="st-md-z66310v" class="maytag-a m-b text-xs">Staging mode build-z66310v</small> -->
@@ -54,9 +56,9 @@
 		</div>
 	</div>
 	<div class="footer-legal clearfix">
-		<a href="//convoe.com/topic/91/terms-of-service" class="btn btn-link">Policies</a>
-		<a href="//convoe.com/category/19/help" class="btn btn-link">Help</a>
-		<a href="//convoe.com/topic/130/rules-guidelines" class="btn btn-link">Guidelines</a>
+		<a href="#" class="btn btn-link">Policies</a>
+		<a href="#" class="btn btn-link">Help</a>
+		<a href="#" class="btn btn-link">Guidelines</a>
 	</div>
 </div>
 </div>
