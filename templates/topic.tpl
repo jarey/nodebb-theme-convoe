@@ -27,7 +27,6 @@
 
 <!-- // -->
 <script src="{relative_url}/css/assets/scripts/cnvo.s.js" type="text/javascript"></script>
-<script src="{relative_url}/css/assets/scripts/cnvo.x.js" type="text/javascript"></script>
 
 <div class="hero-wrapper">
 <div id="hero-b" class="hero-banner">
