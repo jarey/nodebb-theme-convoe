@@ -4,18 +4,33 @@
 	height: 350px;
 	visibility: hidden;
 	width: 100%;
+	
+		position: fixed;
+		height: 100%;
+		z-index: 10;
+		padding-top: 30px;
 
 	> div {
-		position: absolute;
 		height: 100%;
-		background: rgba(64, 64, 64, 0.6);
+		background: #FFF;
 		visibility: visible;
-		-webkit-border-top-left-radius: 7px;
-		-moz-border-radius-topleft: 7px;
-		border-top-left-radius: 7px;
-		-webkit-border-top-right-radius: 7px;
-		-moz-border-radius-topright: 7px;
-		border-top-right-radius: 7px;
+		position: fixed;
+		width: 100%!important;
+		padding-top: 30px;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		right: 0;
+		
+		
+		position: fixed;
+			width: 100% !important;
+			padding-top: 30px;
+			-moz-border-radius: 0;
+			-webkit-border-radius: 0;
+			border-radius: 0;
+			
+			padding-top: 70px;
 
 
 		.btn-toolbar {
@@ -26,7 +41,7 @@
 				margin: 0 auto 8px auto;
 
 				span {
-					color: white;
+					//color: white;
 
 					&:hover {
 						text-decoration: none;
@@ -39,33 +54,45 @@
 			}
 
 			&.action-bar {
-				width: 90%;
+				width: 100%;
 				margin: 8px auto 0 auto;
+				text-align: right;
 			}
 		}
 
 		input {
 			width: 100%;
-			text-align: center;
-			border: none;
-			padding: 0.5em 0;
-			-webkit-border-radius: 0px;
-			-moz-border-radius: 0px;
-			border-radius: 0px;
-			margin: 5px auto 10px auto;
+			border: 0;
+			padding: .5em 0;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			margin: 5px auto 0 auto;
 			display: block;
+			text-align: left;
+			font-size: 32px;
+			font-weight: 600;
+			text-overflow: ellipsis;
+			
+			&[readonly] {
+				cursor: not-allowed;
+			}
 		}
 
 		textarea {
-			background: rgba(64, 64, 64, 0.95);
-			border: none;
-			padding: 0.5em;
+			background: rgba(0, 0, 0, 0);
+			border: 0;
+			padding: 0;
 			display: block;
 			width: 100%;
-			margin: 0em auto;
+			margin: 0 auto;
 			resize: none;
-			color: white;
+			color: #333332;
 			height: 200px;
+			font-size: 20px;
+			font-weight: 300;
+			margin-top: 1em;
+			font-family: "FF Tisa";
 		}
 
 		.imagedrop {
@@ -103,7 +130,8 @@
 	}
 
 	@media (max-width: 979px) {
-		position: fixed;
+		/*
+position: fixed;
 		
 		height: 100%;
 		z-index: 1;
@@ -111,22 +139,18 @@
 		&.row{
 			margin:0 !important;
 		}
+*/
 
 		> div {
-			position: static;
-			width: 100% !important;
-			padding-top: 30px;
-			-moz-border-radius: 0;
-			-webkit-border-radius: 0;
-			border-radius: 0;
-
+			padding-top: 38px;
+			
 			.btn-toolbar{
 				&.formatting-bar{
 					-webkit-border-radius: 0;
 					-moz-border-radius: 0;
 					border-radius: 0;
 					padding: 0;
-					background: #222;
+					background: transparent;
 				}
 			}
 			
@@ -144,4 +168,27 @@
 		}
 
 	}
+}
+
+.post-window>div .btn-toolbar.action-bar .btn-group {
+	margin-right:0 !important;
+}
+
+.formatting-group {
+	position: relative;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border: 1px solid;
+	border-color: #262625 #1c1c1b #121211;
+	box-shadow: 0 1px 3px -1px rgba(0,0,0,0.7),inset 0 0 1px rgba(255,255,255,0.07),inset 0 0 2px rgba(255,255,255,0.15000000000000002);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(49,49,47,0.97)),to(#262625));
+	background-image: -moz-linear-gradient(top,rgba(49,49,47,0.97),#262625);
+	background-image: -webkit-linear-gradient(top,rgba(49,49,47,0.97),#262625);
+	background-image: -o-linear-gradient(top,rgba(49,49,47,0.97),#262625);
+	background-image: linear-gradient(to bottom,rgba(49,49,47,0.97),#262625);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f731312f',endColorstr='#ff262625',GradientType=0);
+	padding-left: 5px;
+	padding-right: 5px;
 }

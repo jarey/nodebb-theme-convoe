@@ -1,27 +1,46 @@
 .users {
-	.users-container {
-		padding: 0;
-	}
+	.users-container {}
 
 	.users-box{
-		display: inline-block;
-		margin-top: 20px;
-		text-align: center;
-		vertical-align: top;
-		width: 104px;
+		height: 100%;
+		position: relative;
+	
+		
+		.panel {
+			overflow: hidden;
+		}
 
 		img {
-			width:80px;
-			height:80px;
+			padding: 0;
+			margin: 0;
+			width: 128px;
+			border-radius: 100%;
 		}
 
 		a {
 			.inline-block;
-			max-width: 94px;
-			margin: 5px;
+			zoom: 1;
 			text-overflow: ellipsis;
+			overflow: visible;
+			white-space: nowrap;
+			max-width: 120px;
+		}
+		
+		.h6 {
 			overflow: hidden;
 			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		
+		.user-info {
+			position: relative;
+			text-align: left;
+			display: block;
+			
+			a {
+				position: relative;
+				overflow: hidden;
+			}
 		}
 	}
 
@@ -52,4 +71,16 @@
 			}
 		}
 	}
+}
+
+
+.user-card {
+/* 	height: 330px; */
+}
+.user-card-avatar {
+	height: 180px;
+}
+
+.user-card-stats {
+	height: 112px;
 }

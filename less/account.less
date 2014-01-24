@@ -1,8 +1,17 @@
 // TODO: Needs to be cleaned up - do not child theme or you will lose your work.
 
-.account {
+.account, .account-edit {
+/*
 	.topic-row {
 		width: 100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		border: 1px solid #EBEFF6;
+		padding-bottom: 15px;
+		border-radius: 0;
+	}
+*/
+	.user-profile-picture {
 	}
 }
 
@@ -10,37 +19,22 @@
 	.topic-row {
 		width: 100%;
 		margin-bottom: 10px;
-
-		.user-img {
-			width: 48px;
-			height: 48px;
-			float: left;
-		}
-
-		a {
-			span {
-				overflow: hidden;
-				height: 16px;
-				padding-left: 8px;
-			}
-		}
-
-		p {
-			display:block;
-			padding-left: 8px;
-			overflow: hidden;
-		}
+		border: 0 none;
+		border-top: 1px solid #EBEFF6;
+		padding-bottom: 0;
 	}
-
 }
 
-.account-username-box {
-  border-bottom:1px solid #e3e3e3;
-  margin-bottom:10px;
+.fullname {
+	display: block;
+} 
+
+.account-username-box{
 }
 
 .account-sub-links a{
 	margin-left:10px;
+	font-weight: 400;
 }
 
 .account-block {
@@ -56,19 +50,19 @@
 
 .account-online-status {
 	.fa-circle-o {
-		color:red;
+		color: #FB6B5B;
 	}
 	.fa-circle {
-		color:green;
+		color: #92CF5C;
 	}
 }
 
 .user-profile-picture {
-	width:128px;
+	width:120px;
 }
 
 .user-picture-label {
-	font-size:20px;
+	font-size:initial;
 }
 
 .account-bio-block{
@@ -81,9 +75,201 @@
 	width:100px;
 }
 
-
-.account-username{
-  font-size:20px;
-  font-weight:bold;
+.account-info {
+	margin-right: 5px;
+}
+.account-info:not(:first-child) {
+	padding: 0 5px;
+	font-weight: 300;
+}
+.account-form-control {
+	border: 0 none;
+	border-bottom: 1px solid #B9B9B9;
 }
 
+.signature {
+	margin: 25px;
+	-webkit-transition: margin .1s;
+	-moz-transition: margin .1s;
+	-ms-transition: margin .1s;
+	-o-transition: margin .1s;
+	transition: margin .1s;
+	line-height: 1.4;
+	text-align: center;
+	font-size: 22px;
+	font-family: "FF Tisa";
+	font-style: oblique;
+}
+
+@media only screen and (max-width: 768px), 
+only screen and (max-device-width: 768px) {
+	.signature {
+		font-size: 18.5px;
+	}
+}
+@media only screen and (max-width: 480px), 
+only screen and (max-device-width: 480px) {
+	.signature {
+		font-size: 16px;
+	}	
+}
+
+
+.account-username{
+}
+
+.account-online-status {
+	position: absolute;
+	font-size: 12px;
+	display: inline-block;
+	top: 0;
+	right: 0;
+}
+
+
+.user-recent-posts {
+	div {
+	
+		.pointer;
+		overflow:hidden;
+		p {
+		
+		}
+	}
+
+	span {
+		/* padding-top: 10px; */
+	}
+}
+
+.user-thumb-sm {
+	width: 50px;
+}
+.user-avatar {
+	border-radius: 100%;
+	border-radius: 500px;
+	-webkit-border-radius: 100%;
+	-webkit-border-radius: 500px;
+}
+
+.spacer {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+.overlay { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	width: 120px;
+	height: 120px;
+}
+.change-picture {
+	display: block;
+	position: relative;
+}
+.change-picture:hover .overlay { 
+	display: block; 
+}
+.change-picture:hover .overlay:before { 
+	content: "\f055";
+	font-size: 30px;
+	font-family: FontAwesome;
+	color: #FFF;
+	top: 35%;
+	bottom: 35%;
+	position: absolute;
+	display: block;
+	left: 40%;
+	right: 40%;
+}
+
+.favourite-icon {
+	color: #FB6B5B;
+}
+.banned {
+	-webkit-filter:blur(4px);
+	-moz-filter:blur(4px);
+	-o-filter:blur(4px);
+	-ms-filter:blur(4px);
+	filter:blur(4px);
+	filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'blur\'><feGaussianBlur stdDeviation=\'2\' /></filter></svg>#blur");
+	text-decoration:none;
+	display: none;
+	opacity: 0;
+}
+.strike {
+	text-decoration: line-through;
+}
+
+.account-header {
+	color: #FFF;
+} 
+
+.account-header a {
+	color: rgba(255, 255, 255, 0.65);
+}
+.account-header a:hover {
+	color: #FFF;
+}
+.account-header a.bold {
+	color: #FFF;
+}
+.account-header {
+	padding-top: 15px;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+.account-header .spacer {
+	color: rgba(255, 255, 255, 0.65);
+}
+.user-recent-posts {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	overflow-wrap: break-word;
+}
+
+.form-desc {
+	font-size: 15px;
+	//font-family: "FF Tisa";
+	font-weight: 300;
+	color: #B9B9B9;
+}
+
+.account-stats {
+	font-size: 16px;
+}
+.account-footer:before {
+	content: "";
+	display: block;
+	width: 70px;
+	border-top: 1px solid #DEDEDC;
+	text-align: center;
+	margin: 0 auto 20px;
+}
+
+.hero-avatar {
+	width: 120px;
+	height: 120px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	overflow: hidden;
+	border: 3px solid #FFF;
+	z-index: 500;
+	background-color: #FFF;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	margin: 0 auto;
+	text-align: center;
+	margin-top: -65px;
+	margin-bottom: 20px;
+}

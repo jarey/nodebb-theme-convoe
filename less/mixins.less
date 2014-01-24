@@ -18,10 +18,6 @@
 	zoom: 1;
 }
 
-.clear {
-	clear: both;
-}
-
 .zebra {
 	&:nth-child(even) {
 		background: rgba(191,191,191,0.2);
@@ -39,7 +35,7 @@
 	filter: ~`"alpha(opacity = (" + "@{opacity}" * 100 + "))"`;
 }
 
-.border-radius (@radius: 5px) {
+.border-radius (@radius: 3px) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
 	-ms-border-radius: @radius;

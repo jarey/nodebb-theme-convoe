@@ -1,3 +1,6 @@
+.hero-page.topic {
+	background: #FFF;
+}
 .topic {
 
 	&.deleted {
@@ -10,7 +13,7 @@
 		padding: 0;
 
 		> li {
-			padding-bottom: 10px;
+			padding-bottom: 15px;
 
 			&.deleted {
 				-moz-opacity: 0.30;
@@ -27,18 +30,12 @@
 	}
 
 	@media (max-width: 475px) {
-		.favourite-text {
+		.post-tools {
 			display: none;
 		}
-	}
 
-	.post-tools {
-		.post-link {
-			width: 200px;
-			margin:10px;
-			font-size:12px;
-			height:24px;
-			line-height: 24px;
+		.favourite-text {
+			display: none;
 		}
 	}
 
@@ -50,6 +47,13 @@
 	.topic-stats {
 		height: 34px;
 		line-height: 34px;
+		font-weight: 300;
+		font-size: 16px;
+		
+		strong {
+			font-size: 18px;
+			font-weight: 600;
+		}
 	}
 
 	.topic-main-buttons {
@@ -63,20 +67,44 @@
 	}
 
 	.posts {
+		@media (min-width: 992px) {
+/*
+	    	.post-block:after {
+	        	content: "";
+	            position: absolute;
+	            top: 15px;
+	            left: -7px;
+	            border-style: solid;
+	            border-width: 7px 7px 7px 0;
+	            border-color: transparent #f7f7f7;
+	            display: block;
+	            width: 0;
+	            z-index: 1;
+	    	}
+	
+	        .post-block:before {
+	        	content: "";
+	            position: absolute;
+	            top: 15px;
+	            left: -8px;
+	            border-style: solid;
+				border-width: 7px 7px 7px 0;
+	            border-color: transparent rgba(0, 0, 0, 0.125);
+	            display: block;
+	            width: 0;
+	            z-index: 0;
+	         }
+*/
+	    }	
+	    
 		.post-info, .post-block {
 			position: relative;
-			border: 1px solid rgba(0, 0, 0, 0.06);
-			border-radius: 0 0 5px 5px;
 			padding: 10px;
 
 			.post-signature {
+				color: #666;
 				font-size: 12px;
-				border-top: 1px solid #ddd;
 				display: inline-block;
-
-				> p {
-					padding-top: 5px;
-				}
 
 				img {
 					max-width: 200px;
@@ -88,50 +116,32 @@
 		}
 
 		.post-block {
-			border-radius: 5px;
 			margin-bottom: 15px;
+			padding-top: 0;
+			margin-left: 0;
+			padding-left: 0;
+			padding-right: 0;
+			background: transparent;
 
 			.topic-buttons {
-				background: rgba(0, 0, 0, 0.02);
-				border: 1px solid rgba(0, 0, 0, 0.06);
-				margin: -5px 0 0 0;
-				padding: 8px 0 0 23px;
-
+			
 				button.show {
 					display: inline-block !important;
 				}
 
 				@media (max-width: 767px) {
-					padding-left: 9px;
+					/* padding-left: 9px; */
 				}
 			}
 
 			.post-content {
-				padding: 10px 5px 0 5px;
+				padding: 10px 0 0 0;
 				word-wrap: break-word;
 				clear: left;
-
-				> ul, ol {
-					padding-bottom: 10px;
-				}
-
-				ul {
-					> li {
-						list-style-type: disc;
-
-						ul > li {
-							list-style-type: circle;
-
-							ul > li {
-								list-style-type: square;
-							}
-						}
-					}
-				}
-
-				blockquote p {
-					font-size: 14px;
-				}
+				font-family: "FF Tisa";
+				font-size: 18px;
+				margin-top: 10px;
+				
 			}
 
 			.post-images{
@@ -151,92 +161,103 @@
 			}
 
 			.topic-buttons {
-				margin: -11px -10px 0px -10px;
-				border: 0;
-				border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-				padding: 8px 9px 7px 23px;
+				margin:0;
+				border:0;
+				padding:0;
 			}
 
 			.post-content {
-				margin-left: 10px;
+				margin-left: 0;
 			}
 		}
 
-		.img-thumbnail {
-			float:none;
-			padding: 2px;
-			border-radius: 0;
-			margin-bottom: 5px;
+		.profile-image-block {
+			padding-right: 0;
+			padding-left: 0;
 		}
 	}
 
-	.posts li:first-child {
-		.sub-post {
-			display: none !important;
-		}
+//	.posts li:first-child {
+//		.sub-post {
+//			display: none !important;
+//		}
+//
+//		.main-post {
+//			display: block;
+//		}
+//
+//		.col-md-11 {
+//			width: 100%;
+//		}
+//
+//		.topic-title {
+//			line-height: 1.5em;
+//			width: auto;
+//			overflow: hidden;
+//			margin: 0 0 -5px 0;
+//			padding: 0 0 5px 0
+//		}
+//
+//		.avatar {
+//			color: white;
+//			position: relative;
+//			float: left;
+//			margin: 0 10px 0 0;
+//			padding-bottom: 0px;
+//			text-align: center;
+//			width: 100px;
+//
+//			@media (max-width: 767px) {
+//				display: none;
+//			}
+//
+//			.img-thumbnail {
+//				padding: 2px;
+//				border-radius: 0;
+//			}
+//		}
+//
+//		.post-content {
+//			min-height: 80px;
+//		}
+//
+//		hr {
+//			margin: 0 10px 0 0;
+//		}
+//
+//		.post-block {
+//			>h3 {
+//				margin:0px;
+//			}
+//			.topic-buttons {
+//				background: rgba(0, 0, 0, 0.02);
+//				border: 1px solid rgba(0, 0, 0, 0.06);
+//				margin: 0 -11px 0 92px;
+//				padding: 10px;
+//				border-right: 0;
+//
+//				@media (max-width: 767px) {
+//					margin-left: -11px;
+//					border-left: 0;
+//				}
+//
+//				button.show {
+//					display: inline-block!important;
+//				}
+//			}
+//		}
+//	}
 
-		.main-post {
-			display: block;
-		}
+	// styling the chat button in the dropdown to match. surely there's a better way...
+	.chat {
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		.pointer;
 
-		.col-md-11 {
-			width: 100%;
-		}
-
-		.topic-title {
-			line-height: 1.5em;
-			width: auto;
-			overflow: hidden;
-			margin: 0 0 -5px 0;
-			padding: 0 0 5px 0
-		}
-
-		.avatar {
-			position: relative;
-			float: left;
-			margin: 0 10px 0 0;
-			padding-bottom: 0px;
-			text-align: center;
-			width: 100px;
-
-			@media (max-width: 767px) {
-				display: none;
-			}
-
-			.img-thumbnail {
-				padding: 2px;
-				border-radius: 0;
-			}
-		}
-
-		.post-content {
-			min-height: 80px;
-		}
-
-		hr {
-			margin: 0 10px 0 0;
-		}
-
-		.post-block {
-			>h3 {
-				margin:0px;
-			}
-			.topic-buttons {
-				background: rgba(0, 0, 0, 0.02);
-				border: 1px solid rgba(0, 0, 0, 0.06);
-				margin: 0 -11px 0 92px;
-				padding: 10px;
-				border-right: 0;
-
-				@media (max-width: 767px) {
-					margin-left: -11px;
-					border-left: 0;
-				}
-
-				button.show {
-					display: inline-block!important;
-				}
-			}
+		&:hover, &:focus {
+			color: white;
+			background-color: rgb(66, 139, 202);
 		}
 	}
 
@@ -265,10 +286,53 @@
 	}
 }
 
+.topic .posts li:first-child .post-content {
+	letter-spacing: normal;
+	font-weight: 300;
+	font-style: normal;
+}
+.topic .posts li .post-content h1,
+.topic .posts li .post-content h2,
+.topic .posts li .post-content h3,
+.topic .posts li .post-content h4,
+.topic .posts li .post-content h5,
+.topic .posts li .post-content h6 {
+	font-family: "Proxima Nova", "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 600;
+}
+/*
+.topic .posts li .post-content h1:after,
+.topic .posts li .post-content h2:after,
+.topic .posts li .post-content h3:after,
+.topic .posts li .post-content h4:after,
+.topic .posts li .post-content h5:after,
+.topic .posts li .post-content h6:after, { 
+	content: '';
+	position: relative;
+	left: 50%;
+	display: block;
+	margin: 20px 0 20px -50px;
+	width: 100px;
+	height: 2px;
+	background-color: rgba(0, 0, 0, 0.1);
+}*/
+
+.topic-title {
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.topic-row p, .topic-row ul {
+	font-family: "FF Tisa";
+}
+
 .thread_active_users {
 
 	img {
-		height:24px;
+		height: 24px;
+		border-radius: 200%;
+		margin-right: 2.5px;
+		margin-left: 2.5px;
 	}
 
 	.anonymous-box {
@@ -278,5 +342,168 @@
 		top: 2px;
 		position: relative;
 		text-align: center;
+		display: none !important;
+		opacity: 0;
+	}
+}
+
+.media-body .topic-stats { 
+	font-size: 16px;
+}
+
+.topic .posts .post-block .post-content h1 {
+	font-size: 24px
+}
+.topic .posts .post-block .post-content h2 {
+	font-size: 22px
+}
+.topic .posts .post-block .post-content h3 {
+	font-size: 20px
+}
+
+.topic .posts li:first-child .post-block {
+	background: transparent;
+	border: 0 none;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	border-bottom: 1px solid #F2F2F0;
+	padding-top: 0;
+}
+
+.topic .posts .post-info .formatted-number {
+	font-weight: bold;
+}
+
+.topic .posts li:first-child .post-block:before,
+.topic .posts li:first-child .post-block:after {
+	display: none;
+}
+
+
+.topic .posts .post-block .post-content hr {
+	display: block;
+	width: 14%;
+	margin: 50px auto 40px auto;
+	border: 0;
+	border-top: 1px solid #DEDEDC;
+}
+
+.post-block .post-controls{opacity:0;-webkit-transition:opacity .1s linear}
+.post-block:hover .post-controls{opacity:1}
+
+.topic .posts .post-block .post-content a {
+	text-decoration: underline;
+}
+.topic .posts .post-block .post-content a:hover {
+	text-decoration: underline;
+	color: #57AD68;
+}
+
+.media-body .fa-thumb-tack, .media-body .fa-lock {
+	vertical-align: 4px;
+	padding: 0;
+}
+/*
+.media-body .fa-thumb-tack:before {
+	content: "Pinned";
+	font-family: "Proxima Nova","proxima-nova","Helvetica Neue","Helvetica","Arial",sans-serif;
+	border: 1px solid #594F8D;
+	color: #594F8D;
+	padding: 2px 6px;
+	border-radius: 20px;
+}
+.media-body .fa-lock:before {
+	content: "Locked";
+	font-family: "Proxima Nova","proxima-nova","Helvetica Neue","Helvetica","Arial",sans-serif;
+	border: 1px solid #333332;
+	color: #333332;
+	padding: 2px 6px;
+	border-radius: 20px;
+	opacity: .45;
+}
+*/
+
+/* @NOT YET
+.topic-stats:first-child:before {
+	content: '';
+}
+*/
+
+.topic-posted:before, .topic-browsing:before, .topic-timeago:before {
+	content: ' · ';
+	padding: 0 3px;
+}
+.topic-timeago:last-child:before {
+	content: '  ';
+	padding: 0;
+}
+
+.post-block .img-responsive {
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+	border-radius: 3px;
+	position: relative;
+}
+
+.banned-content {}
+//RESPONSIVE STUFF
+@media only screen and (max-width: 992px), 
+only screen and (max-device-width: 992px) {
+	.topic .posts .post-block .post-content {
+		font-size: 115%;
+	} 
+	.topic .posts .post-block .topic-buttons .h4 {
+		font-size: 16.5px;
+	}
+	.topic .posts .post-block .topic-buttons, 
+	.topic .posts .post-block .topic-buttons i {
+		font-size: 90%;
+	}
+	.text-preview {
+		font-size: 16px;
+	}
+	.text-meta {
+		font-size: 14px;
+	}
+	.topic>ul>li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.avatar-md, .thumb {
+		width: 32px;
+		padding: 6px;
+		margin-left: 10px;
+	}
+
+}
+
+@media only screen and (max-width: 767px), 
+only screen and (max-device-width: 767px) {  
+	.topic .posts .post-block .post-content {
+		font-size: 110%;
+	}
+	.topic .posts .post-block .topic-buttons .h4 {
+		font-size: 15px;
+	}
+	.topic .posts .post-block .topic-buttons,
+	.topic .posts .post-block .topic-buttons i {
+		font-size: 85%;
+	}
+	.text-preview {
+		font-size: 14.5px;
+	}
+	.text-meta {
+		font-size: 12.5px;
+	}
+	.topic>ul>li {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.avatar-md, .thumb {
+		width: 32px;
+		padding: 6px;
+		margin-left: 10px;
 	}
 }
