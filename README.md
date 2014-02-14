@@ -1,4 +1,4 @@
-##convoe (Unstable/Incomplete)
+##convoe (Unstable/Incomplete) - DO NOT USE
 
 
 A beautiful, responsive theme developed to be a perfect experience no matter what device it's viewed on. It makes your site look great on all devices or screen resolutions. We picked color schemes and an appropriate font family comfortable to the eye. *Build in SASS on hennessy with mobile first approach down to the last pixel.*
